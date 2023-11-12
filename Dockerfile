@@ -9,5 +9,7 @@ WORKDIR /app/mind-map-main
 #复制主要文件到docker
 COPY index.html .
 COPY dist dist
+#暴露端口
+EXPOSE 80
 #运行http服务
-CMD ["httpd", "-f", "-p", "80", "-h", "/app"]
+CMD ["httpd", "-f",  "-h", "/app"]
